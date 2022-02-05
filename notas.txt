@@ -1,0 +1,48 @@
+ng new nome_projeto
+npm i bootstrap font-awesome
+
+> para rodar a api, na pasta api npm start
+> para rodar o app > ng serve
+
+incluir o bootstrap na confg global de css do npme_projeto
+  - arq angular.json > tag style > incluir os caminhos
+
+criando o primeiro o modulo
+  ng g module home --routing -d // opcao d faz a simulacao da criacao para verificar as
+  alteracoes e se estiver certo execute o comando sem a flag -d
+
+criando o componente
+  ng g component home
+  - o componente ja incluido no module
+
+- home module = exportamos o componente que criamos
+- module projeto = importamos o modulo do componente
+
+configurando rotas
+  - nao chamamos o componente e sim a diretiva <router-outlet></router-outlet>
+  e agora o componente passa a ser carregado a partir da rota
+  - apagamos a importação do componente do module
+
+  - incluir as rotas no app-routing-module
+
+criando o serviço de autenticacao
+  ng g m autenticacao
+  ng g s autenticacao/autenticacao
+
+form mais simples = template = FormsModule
+  > modulo principal = importar HttpClientModule
+  > modulo componente = importar FormsModule
+  Template Driven, em que toda a montagem e a regra de negócio
+  ficam no arquivo de template, e o Angular realiza o controle
+  do modelo de dados utilizando o componente ngModel.
+
+redirecionando rotas
+  - Router (com r) > router.navigate [rota]
+
+variaveis de referencia no formulario
+        #campoUsuario="ngModel"   - login.component.html
+  alteramos o estado de um outro campo no formulario com base no valor desta variavel
+  de refrencia que aponta para outra var que representa outro campo
+
+
+
